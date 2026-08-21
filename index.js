@@ -173,3 +173,29 @@ function findMedian(nums) {
 console.log("7.", findMedian([7, 1, 3, 4, 9]));
 
 
+// ------------------------------------------------------------
+// ------------------------------------------------------------
+
+// 08. Find the Second Largest Number in an Array
+// Construct an efficient scanning function that processes an unsorted array of numbers and extracts the second distinct largest element.
+// /**
+//  * @param {number[]} nums
+//  * @return {number|null}
+//  */
+function findSecondLargest(nums) {
+    let largest = -Infinity;
+    let secondLargest = -Infinity;
+
+    for (const num of nums) {
+        if (num > largest) {
+            secondLargest = largest;
+            largest = num;
+        } else if (num > secondLargest && num < largest) {
+            secondLargest = num;
+        }
+    }
+
+    return secondLargest === -Infinity ? null : secondLargest;
+}
+
+console.log("8.", findSecondLargest([10, 20, 4, 45, 99, 99]));
