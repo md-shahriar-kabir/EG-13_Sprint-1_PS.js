@@ -31,6 +31,31 @@ function generateFibonacci(n) {
 
 console.log("2.", generateFibonacci(7));
 
+// ------------------------------------------------------------
+// ------------------------------------------------------------
+
+
+// 03. Calculate the Greatest Common Divisor (GCD)
+// Implement a function that computes the Greatest Common Divisor (GCD) of two non-negative integers using Euclid's algorithm.
+// /**
+//  * @param {number} a
+//  * @param {number} b
+//  * @return {number}
+//  */
+function findGCD(a, b) {
+    while (b !== 0) {
+        let remainder = a % b;
+        a = b;
+        b = remainder;
+    }
+
+    return a;
+}
+
+console.log("3.", findGCD(48, 18));
+
+
+
 
 
 
