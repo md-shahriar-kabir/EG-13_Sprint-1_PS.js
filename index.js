@@ -5,6 +5,7 @@
 //  * @return {boolean}
 //  */
 function isLeapYear(year){
-    // Write your code here
+    return year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0);
 }
 
+console.log(isLeapYear(2024));
