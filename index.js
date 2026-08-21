@@ -149,4 +149,27 @@ function mergeSortedArrays(arr1, arr2) {
 console.log("6.", mergeSortedArrays([1, 3, 5], [2, 4, 6]));
 
 
+// ------------------------------------------------------------
+// ------------------------------------------------------------
+
+// 07. Find the Median of an Unsorted Array
+// Write a function that calculates the median value of an unsorted array of numbers. If the array length is even, return the average of the two middle elements.
+// /**
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+function findMedian(nums) {
+    const sorted = [...nums].sort((a, b) => a - b);
+
+    const middle = Math.floor(sorted.length / 2);
+
+    if (sorted.length % 2 !== 0) {
+        return sorted[middle];
+    }
+
+    return (sorted[middle - 1] + sorted[middle]) / 2;
+}
+
+console.log("7.", findMedian([7, 1, 3, 4, 9]));
+
 
