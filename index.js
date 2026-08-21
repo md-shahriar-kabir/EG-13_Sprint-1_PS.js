@@ -55,6 +55,33 @@ function findGCD(a, b) {
 console.log("3.", findGCD(48, 18));
 
 
+// ------------------------------------------------------------
+// ------------------------------------------------------------
+
+// 04. Calculate the Least Common Multiple (LCM)
+// Construct a math function that calculates the Least Common Multiple (LCM) of two positive integers using their Greatest Common Divisor.
+// /**
+//  * @param {number} a
+//  * @param {number} b
+//  * @return {number}
+//  */
+function findLCM(a, b) {
+    function findGCD(a, b) {
+        while (b !== 0) {
+            let remainder = a % b;
+            a = b;
+            b = remainder;
+        }
+
+        return a;
+    }
+
+    return (a * b) / findGCD(a, b);
+}
+
+console.log("4.", findLCM(12, 18));
+
+
 
 
 
