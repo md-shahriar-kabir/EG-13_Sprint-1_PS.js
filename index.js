@@ -81,6 +81,31 @@ function findLCM(a, b) {
 
 console.log("4.", findLCM(12, 18));
 
+// ------------------------------------------------------------
+// ------------------------------------------------------------
+
+// 05. Check if a Number is Prime
+// Build a primality testing function that evaluates whether a given positive integer is a prime number.
+// /**
+//  * @param {number} num
+//  * @return {boolean}
+//  */
+function isPrime(num) {
+    if (num < 2) {
+        return false;
+    }
+
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+console.log(isPrime(29));
+
 
 
 
