@@ -8,4 +8,29 @@ function isLeapYear(year){
     return year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0);
 }
 
-console.log(isLeapYear(2024));
+console.log("1.",isLeapYear(2024));
+
+// ------------------------------------------------------------
+// ------------------------------------------------------------
+
+// 02. Generate Fibonacci Sequence Up to N Terms
+// Write a mathematical function that takes an integer n and returns an array containing the first n numbers of the Fibonacci sequence starting from 0 and 1.
+// /**
+//  * @param {number} n
+//  * @return {number[]}
+//  */
+function generateFibonacci(n) {
+    const result = [0, 1];
+
+    for (let i = 2; i < n; i++) {
+        result.push(result[i - 1] + result[i - 2]);
+    }
+
+    return result.slice(0, n);
+}
+
+console.log("2.", generateFibonacci(7));
+
+
+
+
