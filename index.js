@@ -229,3 +229,20 @@ function findMode(arr) {
 
 console.log("9.", findMode([1, 3, 3, 2, 1, 3, 4]));
 
+// ------------------------------------------------------------
+// ------------------------------------------------------------
+
+
+// 10. Natural Sorting of Strings with Embedded Numbers
+// Design a custom string array sorting function that handles natural numeric order inside strings (so "item2" comes before "item10").
+// /**
+//  * @param {string[]} arr
+//  * @return {string[]}
+//  */
+function naturalSort(arr) {
+    return [...arr].sort((a, b) =>
+        a.localeCompare(b, undefined, { numeric: true })
+    );
+}
+
+console.log("10.", naturalSort(["file10.txt", "file2.txt", "file1.txt"]));
