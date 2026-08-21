@@ -199,3 +199,33 @@ function findSecondLargest(nums) {
 }
 
 console.log("8.", findSecondLargest([10, 20, 4, 45, 99, 99]));
+
+
+// ------------------------------------------------------------
+// ------------------------------------------------------------
+
+// 09. Find Most Frequent Element (Mode) in an Array
+// Develop a frequency detection function that identifies and returns the element that appears most often in an array.
+// /**
+//  * @param {Array} arr
+//  * @return {*}
+//  */
+function findMode(arr) {
+    const frequency = {};
+    let mode = arr[0];
+    let maxCount = 0;
+
+    for (const item of arr) {
+        frequency[item] = (frequency[item] || 0) + 1;
+
+        if (frequency[item] > maxCount) {
+            maxCount = frequency[item];
+            mode = item;
+        }
+    }
+
+    return mode;
+}
+
+console.log("9.", findMode([1, 3, 3, 2, 1, 3, 4]));
+
